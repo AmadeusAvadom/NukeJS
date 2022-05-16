@@ -1,0 +1,22 @@
+{
+  "name": "nukejs",
+  "version": "1.0.0",
+  "description": "NukeJs es una libreria de codigo abierto que proporciona programacion orientada a componentes, sintaxis JSX y nuevas caracteristicas en la que estamos trabajando",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run nuke-start",
+    "build": "npm run nuke-build",
+    "nuke-start": "cd bin && cross-env NODE_ENV=development webpack serve",
+    "nuke-build": "cd bin && cross-env NODE_ENV=production webpack"
+  },
+  "author": "Judah",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
