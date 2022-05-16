@@ -6,12 +6,17 @@
   "scripts": {
     "start": "npm run nuke-start",
     "build": "npm run nuke-build",
-    "nuke-start": "cd bin && cross-env NODE_ENV=development webpack serve",
-    "nuke-build": "cd bin && cross-env NODE_ENV=production webpack"
+    "nuke-start": "cross-env NODE_ENV=development webpack serve",
+    "nuke-build": "cross-env NODE_ENV=production webpack",
+    "babel-build": "babel src -d dist/babel"
   },
   "author": "Judah",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
     "html-webpack-plugin": "^5.5.0",

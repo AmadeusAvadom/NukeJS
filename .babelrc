@@ -1,0 +1,4 @@
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": ["./bin/babel/nuke-jsx-plugin.js", "./bin/babel/jsx-syntax-parser.js"]
+}

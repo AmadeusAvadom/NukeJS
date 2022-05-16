@@ -7,15 +7,24 @@ let port = process.env.PORT || 8000;
 
 module.exports = {
     mode,
-    entry: ['../src/index.js'],
+    entry: ['./src/index.js'],
     output: {
-        path: path.resolve(__dirname, '../dist' ),
+        path: path.resolve(__dirname, 'dist' ),
         filename: 'build/[name].js',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: ['babel-loader'],
+            }
+        ]
     },
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve( __dirname, '../public/index.html' ),
+            template: path.resolve( __dirname, 'public/index.html' ),
             minify: false,
         }),
     ],

@@ -1,1 +1,3 @@
-console.log("Hello World in Nuke js");
+import Nuke from "../bin/nuke";
+
+Nuke.root(<div>Hola en Nuke JS</div>)
