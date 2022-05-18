@@ -1,3 +1,9 @@
-import Nuke from "../bin/nuke";
+import Nuke from "nuke-core-js";
 
-Nuke.root(<div>Hola en Nuke JS</div>)
+const App = () => {
+    return (
+        <div>Hola en Nuke JS</div>
+    )
+}
+
+Nuke.root(<App />)

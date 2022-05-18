@@ -6,7 +6,7 @@ let mode = process.env.NODE_ENV || "development";
 let port = process.env.PORT || 8000;
 
 module.exports = {
-    mode,
+    mode: "development",
     entry: ['./src/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist' ),
