@@ -3,9 +3,11 @@
 
 ## Tutorial
 
+Para empezar, instale los modulos necesarios con `npm install`
+
 ### Comandos
 
-* `npm start`: Inicia el proyecto en modo de desarrollo y habiolita un servidor para el proyecto
+* `npm start`: Inicia el proyecto en modo de desarrollo y habilita un servidor para el proyecto
 
 ### Sintaxis basica
 
