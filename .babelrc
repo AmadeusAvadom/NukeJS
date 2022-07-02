@@ -1,4 +1,7 @@
 {
-    "presets": ["@babel/preset-env"],
-    "plugins": ["babel-plugin-nuke"]
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-typescript"
+    ],
+    "plugins": ["./nuke.parser.js"]
 }

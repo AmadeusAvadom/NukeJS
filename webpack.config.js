@@ -7,7 +7,7 @@ let port = process.env.PORT || 8000;
 
 module.exports = {
     mode: "development",
-    entry: ['./src/index.js'],
+    entry: ['./src/index.tsx'],
     output: {
         path: path.resolve(__dirname, 'dist' ),
         filename: 'build/[name].js',
@@ -15,11 +15,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: ['babel-loader'],
+                use: ['babel-loader', 'ts-loader'],
             }
-        ]
+        ],
+        
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -33,6 +34,10 @@ module.exports = {
         historyApiFallback: true,
         allowedHosts: ["all"]
     },
+    target: "web",
     stats: "errors-only",
-    devtool: 'source-map'
+    devtool: 'source-map',
+    resolve: {
+        extensions: ['.ts', '.js', '.json'],
+    },
 }
